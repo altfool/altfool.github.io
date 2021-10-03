@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://altfool.github.io</id>
     <title>Always-The-Fool</title>
-    <updated>2021-10-03T03:03:37.364Z</updated>
+    <updated>2021-10-03T03:05:51.618Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://altfool.github.io"/>
     <link rel="self" href="https://altfool.github.io/atom.xml"/>
@@ -15,7 +15,7 @@
         <id>https://altfool.github.io/post/hello-gridea/</id>
         <link href="https://altfool.github.io/post/hello-gridea/">
         </link>
-        <updated>2018-12-10T01:00:00.000Z</updated>
+        <updated>2018-12-09T12:00:00.000Z</updated>
         <summary type="html"><![CDATA[<p>👏  欢迎使用 <strong>Gridea</strong> ！<br>
 ✍️  <strong>Gridea</strong> 一个静态博客写作客户端。你可以用它来记录你的生活、心情、知识、笔记、创意... ...</p>
 ]]></summary>
