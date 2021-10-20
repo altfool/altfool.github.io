@@ -303,7 +303,7 @@
                         src='https://altfool.github.io/media/images/music.png' alt="音乐播放器" class="musicbtn"></i></a>
         </div>
         <div class="avatar-border">
-            <img src="https://altfool.github.io/images/avatar.png?v=1634696021963" class="avatar">
+            <img src="https://altfool.github.io/images/avatar.png?v=1634700936519" class="avatar">
         </div>
         <div class="sitename">Always-The-Fool</div>
         <span class="description" data-text='["温故而知新"]'>&nbsp;</span>
@@ -1017,7 +1017,7 @@ menulist.eq(i).show();
                 
             </div>
             <div class="postinfo-detail">
-                <div class="postdate"><i class="fa fa-calendar"></i>2021-10-19</div>
+                <div class="postdate"><i class="fa fa-calendar"></i>2021-10-18</div>
             <div class="poststatus postdate"><i class="fa fa-clock-o"></i> 2 min read</div>
             <div class="posttag">
                 
@@ -1053,7 +1053,8 @@ if not in system path, you can try this : <strong>find_package(xxx REQUIRED PATH
 这里的&quot;_LIBRARIES&quot;同样全部大写，有的库只要写&quot;_LIBS&quot;作为后缀也能用，比如&quot;OpenCV_LIBS&quot;，我真的很讨厌这样（played with 几个不同的库包过），干脆就全部写完整的libraries就好了。</li>
 </ol>
 <h3 id="2-packages-in-slamc"><strong>2. Packages in SLAM/C++</strong></h3>
-<p>目前接触到的库包包含了：<strong>Eigen</strong>, <strong>Sophus</strong>, <strong>OpenCV</strong>, <strong>Ceres</strong>, <strong>g2o</strong>, <strong>Pangolin</strong>等</p>
+<p>目前接触到的库包包含了：<strong>Eigen</strong>, <strong>Sophus</strong>, <strong>OpenCV</strong>, <strong>Ceres</strong>, <strong>g2o</strong>, <strong>Pangolin</strong>等<br>
+(Sophus和Eigen,Pangolin, OpenCV库一起出现的时候，记得把Sophus放最后。。。或者自己尝试调顺序，因为它有时候会链接出错。。。。迷之bug)</p>
 <h3 id="3-reference"><strong>3. Reference</strong></h3>
 <p><strong>包名/头文件夹/库文件夹对照如下：</strong></p>
 <table>
