@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://altfool.github.io</id>
     <title>Always-The-Fool</title>
-    <updated>2021-10-03T03:05:51.618Z</updated>
+    <updated>2021-10-20T01:19:58.125Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://altfool.github.io"/>
     <link rel="self" href="https://altfool.github.io/atom.xml"/>
@@ -11,15 +11,90 @@
     <icon>https://altfool.github.io/favicon.ico</icon>
     <rights>All rights reserved 2021, Always-The-Fool</rights>
     <entry>
+        <title type="html"><![CDATA[CMakeList里的package/头文件夹名/库文件夹名的对照]]></title>
+        <id>https://altfool.github.io/post/cmakelist-li-de-packagetou-wen-jian-jia-ming-ku-wen-jian-jia-ming-de-dui-zhao/</id>
+        <link href="https://altfool.github.io/post/cmakelist-li-de-packagetou-wen-jian-jia-ming-ku-wen-jian-jia-ming-de-dui-zhao/">
+        </link>
+        <updated>2021-10-18T12:28:55.000Z</updated>
+        <content type="html"><![CDATA[<p>开始接触CMAKE创建c++工程写SLAM。 CMake里面调用其他库的方法已经了解了，但是每次调用的时候那个package名/头文件夹名和库文件夹名总让人很困惑。就不明白为啥不一致（强迫症的克星啊），也许以后能理解这一点。<br>
+目前加入其他库的指令有：</p>
+<ol>
+<li><strong>find_package(xxx REQUIRED)</strong>,<br>
+if not in system path, you can try this : <strong>find_package(xxx REQUIRED PATHS xxx)</strong></li>
+<li><strong>include_directories(${xxx_INCLUDE_DIRS})</strong><br>
+注意，这里的&quot;_INCLUDE_DIRS&quot;全部要大写，而xxx则是分情况；</li>
+<li><strong>target_link_libraries(xxx ${xxx_LIBRARIES})</strong><br>
+这里的&quot;_LIBRARIES&quot;同样全部大写，有的库只要写&quot;_LIBS&quot;作为后缀也能用，比如&quot;OpenCV_LIBS&quot;，我真的很讨厌这样（play with几个不同的库包过），干脆就全部写完整的libraries就好了。</li>
+</ol>
+<hr>
+<p>目前接触到的库包包含了：<strong>Eigen</strong>, <strong>Sophus</strong>, <strong>OpenCV</strong>, <strong>Ceres</strong>, <strong>g2o</strong>, <strong>Pangolin</strong>等</p>
+<hr>
+<p><strong>包名/头文件夹/库文件夹对照如下：</strong></p>
+<table>
+<thead>
+<tr>
+<th>&lt;package&gt;</th>
+<th>&lt;include_directory&gt;</th>
+<th>&lt;link_library&gt;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Eigen3</strong></td>
+<td><strong>EIGEN3</strong></td>
+<td># (only header files)</td>
+</tr>
+<tr>
+<td><strong>Sophus</strong></td>
+<td><strong>SOPHUS</strong></td>
+<td># (only header files)</td>
+</tr>
+<tr>
+<td>OpenCV</td>
+<td>OpenCV</td>
+<td>OpenCV</td>
+</tr>
+<tr>
+<td>Ceres</td>
+<td>Ceres</td>
+<td>Ceres</td>
+</tr>
+<tr>
+<td><strong>g2o</strong></td>
+<td><strong>G2O</strong></td>
+<td>G2O</td>
+</tr>
+<tr>
+<td>Pangolin</td>
+<td>Pangolin</td>
+<td>Pangolin</td>
+</tr>
+</tbody>
+</table>
+<p>有些时候include_directory用全大写或者原包名都是可以的，太混乱了，我就按自己的格式记录的。有些可能还和package版本相关，如果CMake添加不成功，可以看看path，包名啥的。</p>
+<hr>
+<p>这里再记录下每次安装新package需要的步骤。当然，如果ubuntu的自带包管理可以直接安装，就直接安装啦。</p>
+<ol>
+<li>download source code, like: <strong>git clone https://xxxxx</strong></li>
+<li>inside directory: <strong>mkdir build &amp; cd build</strong></li>
+<li><strong>cmake ..</strong> (.. 表示上层目录)</li>
+<li><strong>make</strong></li>
+<li><strong>sudo make install</strong> ( 如果不想装系统路径下，那么在CMake里find_package记得注明package当前的目录)</li>
+</ol>
+]]></content>
+    </entry>
+    <entry>
         <title type="html"><![CDATA[Hello Gridea]]></title>
         <id>https://altfool.github.io/post/hello-gridea/</id>
         <link href="https://altfool.github.io/post/hello-gridea/">
         </link>
-        <updated>2018-12-09T12:00:00.000Z</updated>
-        <summary type="html"><![CDATA[<p>👏  欢迎使用 <strong>Gridea</strong> ！<br>
+        <updated>2018-12-08T23:00:00.000Z</updated>
+        <summary type="html"><![CDATA[<p>Markdown cheat sheet link: https://www.markdownguide.org/cheat-sheet/</p>
+<p>👏  欢迎使用 <strong>Gridea</strong> ！<br>
 ✍️  <strong>Gridea</strong> 一个静态博客写作客户端。你可以用它来记录你的生活、心情、知识、笔记、创意... ...</p>
 ]]></summary>
-        <content type="html"><![CDATA[<p>👏  欢迎使用 <strong>Gridea</strong> ！<br>
+        <content type="html"><![CDATA[<p>Markdown cheat sheet link: https://www.markdownguide.org/cheat-sheet/</p>
+<p>👏  欢迎使用 <strong>Gridea</strong> ！<br>
 ✍️  <strong>Gridea</strong> 一个静态博客写作客户端。你可以用它来记录你的生活、心情、知识、笔记、创意... ...</p>
 <!-- more -->
 <p><a href="https://github.com/getgridea/gridea">Github</a><br>

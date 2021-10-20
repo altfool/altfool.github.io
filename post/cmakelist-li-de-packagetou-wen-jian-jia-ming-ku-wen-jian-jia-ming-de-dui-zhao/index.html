@@ -2,10 +2,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
-    <meta name="description" content="Markdown cheat sheet link: https://www.markdownguide.org/cheat-sheet/
-👏  欢迎使用 Gridea ！
-✍️  Gridea 一个静态博客写作客户端。你可以用它来记录你..." />
-    <meta name="keywords" content="Gridea" />
+    <meta name="description" content="开始接触CMAKE创建c++工程写SLAM。 CMake里面调用其他库的方法已经了解了，但是每次调用的时候那个package名/头文件夹名和库文件夹名总让人很困惑。就不明白为啥不一致（强迫症的克星啊），也许以后能理解这一点。
+目前加入其他库..." />
+    <meta name="keywords" content="CMake,SLAM" />
     <link rel="stylesheet" href="https://altfool.github.io/media/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://altfool.github.io/styles/main.css">
     <!-- 代码渲染风格css -->
@@ -47,7 +46,7 @@
         });
     </script>
     
-    <title>Hello Gridea</title>
+    <title>CMakeList里的package/头文件夹名/库文件夹名的对照</title>
 
     <!-- 大纲索引css调整 -->
     
@@ -1013,51 +1012,100 @@ menulist.eq(i).show();
         <div class="postshow postpadding" style="padding-bottom: 0;">
             
             <div class="postdetailimg">
-                <img src="https://altfool.github.io/post-images/hello-gridea.png" class="postimage" style="cursor:auto">
+                
+                <img src="/media/images/custom-postdefaultimage.JPG" class="postimage">
+                
             </div>
             <div class="postinfo-detail">
-                <div class="postdate"><i class="fa fa-calendar"></i>2018-12-08</div>
-                <div class="poststatus postdate"><i class="fa fa-clock-o"></i> 2 min read</div>
-                <div class="posttag">
-                    
-                    <a data-pjax href="https://altfool.github.io/tag/_hRoqNcXu/" class="postlink">
-                        <i class="fa fa-tag"></i> Gridea
-                    </a>
-                    
-                </div>
+                <div class="postdate"><i class="fa fa-calendar"></i>2021-10-18</div>
+            <div class="poststatus postdate"><i class="fa fa-clock-o"></i> 2 min read</div>
+            <div class="posttag">
+                
+                <a data-pjax href="https://altfool.github.io/tag/rBpBMKSE5/" class="postlink">
+                    <i class="fa fa-tag"></i> CMake
+                </a>
+                
+                <a data-pjax href="https://altfool.github.io/tag/QlKC5289D/" class="postlink">
+                    <i class="fa fa-tag"></i> SLAM
+                </a>
+                
             </div>
-            
+        </div>
+        
         <div id="articlecontent">
             <div id="texttitle" style="text-align: center">
-                <h2 id="ptitle">Hello Gridea</h2>
+                <h2 id="ptitle">CMakeList里的package/头文件夹名/库文件夹名的对照</h2>
                 <!-- id 将作为查询条件 -->
-                <div id="pl" style="display:none">https://altfool.github.io/post/hello-gridea/</div>
+                <div id="pl" style="display:none">https://altfool.github.io/post/cmakelist-li-de-packagetou-wen-jian-jia-ming-ku-wen-jian-jia-ming-de-dui-zhao/</div>
                 <div id="rootaddr" style="display:none">https://altfool.github.io</div>
                 
             </div>
             <div class="text ">
-                <p>Markdown cheat sheet link: https://www.markdownguide.org/cheat-sheet/</p>
-<p>👏  欢迎使用 <strong>Gridea</strong> ！<br>
-✍️  <strong>Gridea</strong> 一个静态博客写作客户端。你可以用它来记录你的生活、心情、知识、笔记、创意... ...</p>
-<!-- more -->
-<p><a href="https://github.com/getgridea/gridea">Github</a><br>
-<a href="https://gridea.dev/">Gridea 主页</a><br>
-<a href="http://fehey.com/">示例网站</a></p>
-<h2 id="特性">特性👇</h2>
-<p>📝  你可以使用最酷的 <strong>Markdown</strong> 语法，进行快速创作</p>
-<p>🌉  你可以给文章配上精美的封面图和在文章任意位置插入图片</p>
-<p>🏷️  你可以对文章进行标签分组</p>
-<p>📋  你可以自定义菜单，甚至可以创建外部链接菜单</p>
-<p>💻  你可以在 <strong>Windows</strong>，<strong>MacOS</strong> 或 <strong>Linux</strong> 设备上使用此客户端</p>
-<p>🌎  你可以使用 <strong>𝖦𝗂𝗍𝗁𝗎𝖻 𝖯𝖺𝗀𝖾𝗌</strong> 或 <strong>Coding Pages</strong> 向世界展示，未来将支持更多平台</p>
-<p>💬  你可以进行简单的配置，接入 <a href="https://github.com/gitalk/gitalk">Gitalk</a> 或 <a href="https://github.com/SukkaW/DisqusJS">DisqusJS</a> 评论系统</p>
-<p>🇬🇧  你可以使用<strong>中文简体</strong>或<strong>英语</strong></p>
-<p>🌁  你可以任意使用应用内默认主题或任意第三方主题，强大的主题自定义能力</p>
-<p>🖥  你可以自定义源文件夹，利用 OneDrive、百度网盘、iCloud、Dropbox 等进行多设备同步</p>
-<p>🌱 当然 <strong>Gridea</strong> 还很年轻，有很多不足，但请相信，它会不停向前 🏃</p>
-<p>未来，它一定会成为你离不开的伙伴</p>
-<p>尽情发挥你的才华吧！</p>
-<p>😘 Enjoy~</p>
+                <p>开始接触CMAKE创建c++工程写SLAM。 CMake里面调用其他库的方法已经了解了，但是每次调用的时候那个package名/头文件夹名和库文件夹名总让人很困惑。就不明白为啥不一致（强迫症的克星啊），也许以后能理解这一点。<br>
+目前加入其他库的指令有：</p>
+<ol>
+<li><strong>find_package(xxx REQUIRED)</strong>,<br>
+if not in system path, you can try this : <strong>find_package(xxx REQUIRED PATHS xxx)</strong></li>
+<li><strong>include_directories(${xxx_INCLUDE_DIRS})</strong><br>
+注意，这里的&quot;_INCLUDE_DIRS&quot;全部要大写，而xxx则是分情况；</li>
+<li><strong>target_link_libraries(xxx ${xxx_LIBRARIES})</strong><br>
+这里的&quot;_LIBRARIES&quot;同样全部大写，有的库只要写&quot;_LIBS&quot;作为后缀也能用，比如&quot;OpenCV_LIBS&quot;，我真的很讨厌这样（play with几个不同的库包过），干脆就全部写完整的libraries就好了。</li>
+</ol>
+<hr>
+<p>目前接触到的库包包含了：<strong>Eigen</strong>, <strong>Sophus</strong>, <strong>OpenCV</strong>, <strong>Ceres</strong>, <strong>g2o</strong>, <strong>Pangolin</strong>等</p>
+<hr>
+<p><strong>包名/头文件夹/库文件夹对照如下：</strong></p>
+<table>
+<thead>
+<tr>
+<th>&lt;package&gt;</th>
+<th>&lt;include_directory&gt;</th>
+<th>&lt;link_library&gt;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Eigen3</strong></td>
+<td><strong>EIGEN3</strong></td>
+<td># (only header files)</td>
+</tr>
+<tr>
+<td><strong>Sophus</strong></td>
+<td><strong>SOPHUS</strong></td>
+<td># (only header files)</td>
+</tr>
+<tr>
+<td>OpenCV</td>
+<td>OpenCV</td>
+<td>OpenCV</td>
+</tr>
+<tr>
+<td>Ceres</td>
+<td>Ceres</td>
+<td>Ceres</td>
+</tr>
+<tr>
+<td><strong>g2o</strong></td>
+<td><strong>G2O</strong></td>
+<td>G2O</td>
+</tr>
+<tr>
+<td>Pangolin</td>
+<td>Pangolin</td>
+<td>Pangolin</td>
+</tr>
+</tbody>
+</table>
+<p>有些时候include_directory用全大写或者原包名都是可以的，太混乱了，我就按自己的格式记录的。有些可能还和package版本相关，如果CMake添加不成功，可以看看path，包名啥的。</p>
+<hr>
+<p>这里再记录下每次安装新package需要的步骤。当然，如果ubuntu的自带包管理可以直接安装，就直接安装啦。</p>
+<ol>
+<li>download source code, like: <strong>git clone https://xxxxx</strong></li>
+<li>inside directory: <strong>mkdir build &amp; cd build</strong></li>
+<li><strong>cmake ..</strong> (.. 表示上层目录)</li>
+<li><strong>make</strong></li>
+<li><strong>sudo make install</strong> ( 如果不想装系统路径下，那么在CMake里find_package记得注明package当前的目录)</li>
+</ol>
 
             </div>
             <hr style="width: 80%;">
@@ -1065,7 +1113,7 @@ menulist.eq(i).show();
             <div class="postfooter">
                 <ul class="post-copyright">
                     <li><strong>文章作者：</strong>Zongming Yang</li>
-            <li><strong>原文链接：</strong>https://altfool.github.io/post/hello-gridea/</li>
+            <li><strong>原文链接：</strong>https://altfool.github.io/post/cmakelist-li-de-packagetou-wen-jian-jia-ming-ku-wen-jian-jia-ming-de-dui-zhao/</li>
             <li><strong>版权声明：</strong>本博客所有文章除特别声明外，均采用<i class="fa fa-fw fa-creative-commons"></i>BY-NC-SA
                 许可协议。转载请注明出处！</li>
             </ul>
@@ -1092,20 +1140,18 @@ menulist.eq(i).show();
             
         <div id="otherpost">
             
-            <a  data-pjax class="prev-post-pc" href="https://altfool.github.io/post/cmakelist-li-de-packagetou-wen-jian-jia-ming-ku-wen-jian-jia-ming-de-dui-zhao/"  style="color: black;">
-                <div id="ppcontainer">
+            
+            <a data-pjax class="next-post-pc" href="https://altfool.github.io/post/hello-gridea/"  style="color: black;">
+                <div id="npcontainer">
                     
+                    <img src="https://altfool.github.io/post-images/hello-gridea.png" style="width: 100%;" class="opimg">
                     
-                    <img src="/media/images/custom-postdefaultimage.JPG" style="width: 100%;" class="opimg">
-                    
-                    
-                    <h4 class="optitle">CMakeList里的package/头文件夹名/库文件夹名的对照</h4>
+                    <h4 class="optitle">Hello Gridea</h4>
                 </div>
             </a>
-            <div class="prev-post">
-                上一篇 <a  data-pjax href="https://altfool.github.io/post/cmakelist-li-de-packagetou-wen-jian-jia-ming-ku-wen-jian-jia-ming-de-dui-zhao/">CMakeList里的package/头文件夹名/库文件夹名的对照</a>
+            <div class="next-post">
+                下一篇 <a  data-pjax href="https://altfool.github.io/post/hello-gridea/">Hello Gridea</a>
             </div>
-            
             
         </div>
     </div>
@@ -1124,14 +1170,7 @@ menulist.eq(i).show();
     $("#hotnum").attr('id', pl);
 </script>
                     <div class="toc-container">
-                        <ul class="markdownIt-TOC">
-<li>
-<ul>
-<li><a href="#%E7%89%B9%E6%80%A7">特性👇</a></li>
-</ul>
-</li>
-</ul>
-
+                        
                     </div>
                     <div class="tog">
                         <div class="toggleContainer">
