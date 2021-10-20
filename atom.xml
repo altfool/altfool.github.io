@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://altfool.github.io</id>
     <title>Always-The-Fool</title>
-    <updated>2021-10-20T03:35:38.364Z</updated>
+    <updated>2021-10-20T04:53:10.190Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://altfool.github.io"/>
     <link rel="self" href="https://altfool.github.io/atom.xml"/>
@@ -15,7 +15,7 @@
         <id>https://altfool.github.io/post/cmakelist-li-de-packagetou-wen-jian-jia-ming-ku-wen-jian-jia-ming-de-dui-zhao/</id>
         <link href="https://altfool.github.io/post/cmakelist-li-de-packagetou-wen-jian-jia-ming-ku-wen-jian-jia-ming-de-dui-zhao/">
         </link>
-        <updated>2021-10-19T02:13:37.000Z</updated>
+        <updated>2021-10-18T14:13:37.000Z</updated>
         <content type="html"><![CDATA[<h3 id="1-include-package-into-cmake"><strong>1. Include Package into CMake</strong></h3>
 <p>开始接触CMAKE创建c++工程写SLAM。 CMake里面调用其他库的方法已经了解了，但是每次调用的时候那个package名/头文件夹名和库文件夹名总让人很困惑。就不明白为啥不一致（强迫症的克星啊），也许以后能理解这一点。<br>
 目前加入其他库的指令有：</p>
