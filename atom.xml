@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://altfool.github.io</id>
     <title>Always-The-Fool</title>
-    <updated>2021-10-20T01:39:44.035Z</updated>
+    <updated>2021-10-20T02:06:19.838Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://altfool.github.io"/>
     <link rel="self" href="https://altfool.github.io/atom.xml"/>
@@ -15,7 +15,7 @@
         <id>https://altfool.github.io/post/cmakelist-li-de-packagetou-wen-jian-jia-ming-ku-wen-jian-jia-ming-de-dui-zhao/</id>
         <link href="https://altfool.github.io/post/cmakelist-li-de-packagetou-wen-jian-jia-ming-ku-wen-jian-jia-ming-de-dui-zhao/">
         </link>
-        <updated>2021-10-17T12:28:55.000Z</updated>
+        <updated>2021-10-17T00:28:55.000Z</updated>
         <content type="html"><![CDATA[<h3 id="1-include-package-into-cmake"><strong>1. Include Package into CMake</strong></h3>
 <p>开始接触CMAKE创建c++工程写SLAM。 CMake里面调用其他库的方法已经了解了，但是每次调用的时候那个package名/头文件夹名和库文件夹名总让人很困惑。就不明白为啥不一致（强迫症的克星啊），也许以后能理解这一点。<br>
 目前加入其他库的指令有：</p>
@@ -56,14 +56,14 @@ if not in system path, you can try this : <strong>find_package(xxx REQUIRED PATH
 <td style="text-align:center">OpenCV</td>
 </tr>
 <tr>
-<td style="text-align:center">Ceres</td>
-<td style="text-align:center">Ceres</td>
-<td style="text-align:center">Ceres</td>
+<td style="text-align:center"><strong>Ceres</strong></td>
+<td style="text-align:center"><strong>CERES</strong></td>
+<td style="text-align:center"><strong>CERES</strong></td>
 </tr>
 <tr>
 <td style="text-align:center"><strong>g2o</strong></td>
 <td style="text-align:center"><strong>G2O</strong></td>
-<td style="text-align:center">G2O</td>
+<td style="text-align:center"><strong>G2O</strong></td>
 </tr>
 <tr>
 <td style="text-align:center">Pangolin</td>
