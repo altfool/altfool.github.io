@@ -3,7 +3,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="description" content="1. Include Package into CMake
-开始接触CMAKE创建c++工程写SLAM。 CMake里面调用其他库的方法已经了解了，但是每次调用的时候那个package名/头文件夹名和库文件夹名总让人很困惑。就不明白为啥不一..." />
+    开始接触CMAKE创建c++工程写SLAM。 CMake里面调用其他库的方法已经了解了，但是每次调用的时候那个package名/头文件夹名和库文件夹名总让人很困惑。就不明白..." />
     <meta name="keywords" content="CMake,SLAM" />
     <link rel="stylesheet" href="https://altfool.github.io/media/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://altfool.github.io/styles/main.css">
@@ -303,7 +303,7 @@
                         src='https://altfool.github.io/media/images/music.png' alt="音乐播放器" class="musicbtn"></i></a>
         </div>
         <div class="avatar-border">
-            <img src="https://altfool.github.io/images/avatar.png?v=1634790229723" class="avatar">
+            <img src="https://altfool.github.io/images/avatar.png?v=1634850623563" class="avatar">
         </div>
         <div class="sitename">Always-The-Fool</div>
         <span class="description" data-text='["温故而知新"]'>&nbsp;</span>
@@ -1018,7 +1018,7 @@ menulist.eq(i).show();
             </div>
             <div class="postinfo-detail">
                 <div class="postdate"><i class="fa fa-calendar"></i>2021-10-17</div>
-            <div class="poststatus postdate"><i class="fa fa-clock-o"></i> 3 min read</div>
+            <div class="poststatus postdate"><i class="fa fa-clock-o"></i> 4 min read</div>
             <div class="posttag">
                 
                 <a data-pjax href="https://altfool.github.io/tag/rBpBMKSE5/" class="postlink">
@@ -1042,8 +1042,8 @@ menulist.eq(i).show();
             </div>
             <div class="text ">
                 <h3 id="1-include-package-into-cmake"><strong>1. Include Package into CMake</strong></h3>
-<p>开始接触CMAKE创建c++工程写SLAM。 CMake里面调用其他库的方法已经了解了，但是每次调用的时候那个package名/头文件夹名和库文件夹名总让人很困惑。就不明白为啥不一致（强迫症的克星啊），也许以后能理解这一点。<br>
-目前加入其他库的指令有：</p>
+<p>    开始接触CMAKE创建c++工程写SLAM。 CMake里面调用其他库的方法已经了解了，但是每次调用的时候那个package名/头文件夹名和库文件夹名总让人很困惑。就不明白为啥不一致（强迫症的克星啊），也许以后能理解这一点。<br>
+    目前加入其他库的指令有：</p>
 <ol>
 <li><strong>find_package(xxx REQUIRED)</strong>,<br>
 if not in system path, you can try this : <strong>find_package(xxx REQUIRED PATHS xxx)</strong></li>
@@ -1053,7 +1053,7 @@ if not in system path, you can try this : <strong>find_package(xxx REQUIRED PATH
 这里的&quot;_LIBRARIES&quot;同样全部大写，有的库只要写&quot;_LIBS&quot;作为后缀也能用，比如&quot;OpenCV_LIBS&quot;，我真的很讨厌这样（played with 几个不同的库包过），干脆就全部写完整的libraries就好了。</li>
 </ol>
 <h3 id="2-packages-in-slamc"><strong>2. Packages in SLAM/C++</strong></h3>
-<p>目前接触到的库包包含了：<strong>Eigen</strong>, <strong>Sophus</strong>, <strong>OpenCV</strong>, <strong>Ceres</strong>, <strong>g2o</strong>, <strong>Pangolin</strong>等<br>
+<p>    目前接触到的库包包含了：<strong>Eigen</strong>, <strong>Sophus</strong>, <strong>OpenCV</strong>, <strong>Ceres</strong>, <strong>g2o</strong>, <strong>Pangolin</strong>等<br>
 (Sophus和Eigen,Pangolin, OpenCV库一起出现的时候，记得把Sophus放最后。。。或者自己尝试调顺序，因为它有时候会链接出错。。。。迷之bug)</p>
 <h3 id="3-reference"><strong>3. Reference</strong></h3>
 <p><strong>包名/头文件夹/库文件夹对照如下：</strong></p>
@@ -1087,7 +1087,7 @@ if not in system path, you can try this : <strong>find_package(xxx REQUIRED PATH
 <td style="text-align:center"><strong>CERES</strong></td>
 </tr>
 <tr>
-<td style="text-align:center"><strong>g2o</strong></td>
+<td style="text-align:center"><strong>G2O</strong></td>
 <td style="text-align:center"><strong>G2O</strong></td>
 <td style="text-align:center"><strong>G2O</strong></td>
 </tr>
@@ -1098,10 +1098,17 @@ if not in system path, you can try this : <strong>find_package(xxx REQUIRED PATH
 </tr>
 </tbody>
 </table>
-<p>有些时候include_directory用全大写或者原包名都是可以的，太混乱了，我就按自己的格式记录的。有些可能还和package版本相关，如果CMake添加不成功，可以看看path，包名啥的。<br>
-另外，G2O编译吐了，从github官网上下载的是成功的，你也能成功编译并添加到系统里，不过它就是link不了。才发现bleeding edge版本的经常会崩，还是老老实实用它release的几个稳定版本tag吧。而且官网的g2o它还提供了自己的cmake module，记得把它加到自己的CMAKE_MODULE_PATH。用如下类似的command：<br>
-list(APPEND CMAKE_MODULE_PATH ${PROJECT_SOURCE_DIR}/ cmake_module_dir)</p>
-<h3 id="4-compile-new-package"><strong>4. Compile New Package</strong></h3>
+<p>    有些时候include_directory用全大写或者原包名都是可以的，太混乱了，我就按自己的格式记录的。有些可能还和package版本相关，如果CMake添加不成功，可以看看path，包名啥的。<br>
+    另外，G2O编译吐了，从github官网上下载的是成功的，你也能成功编译并添加到系统里，不过它就是link不了。才发现bleeding edge版本的经常会崩，还是老老实实用它release的几个稳定版本tag吧。而且官网的g2o它还提供了自己的cmake module，记得把它加到自己的CMAKE_MODULE_PATH。用如下类似的command:<br>
+<strong>list(APPEND CMAKE_MODULE_PATH ${PROJECT_SOURCE_DIR}/ cmake_module_dir)</strong><br>
+    Jaja，用自己写的**find_package(g2o)**是找不全那个G2O的，而且有时候header files也找不到。劝你还是添加官网提供的FindG2O.cmake模块吧。使用官网提供的模块后，所有G2O全部就大写了。不过官网是没有${G2O_LIBRARIES}或者${G2O_LIBS}这两个变量的，你只能一个一个选择，比如${G2O_STUFF_LIBRARY}，${G2O_CORE_LIBRARY}，${G2O_CLI_LIBRARY}，${G2O_SOLVER_CHOLMOD}等。或者根据官网cmake模块中有的libraries自己设置那2个变量，如：**set(G2O_LIBRARIES ${G2O_STUFF_LIBRARY} ${G2O_CORE_LIBRARY}...)**来使用。</p>
+<h3 id="4-debug-cmakeliststxt-文件"><strong>4. Debug CMakeLists.txt 文件</strong></h3>
+<p>有时候，真的能给CMAKE跪下了。它说明文档里有些说能用的功能，然后用不了，作为一个小白，我只能说一个一个尝试，交学费，把能用的自己记录下来：</p>
+<ol>
+<li>set(CMAKE_FIND_DEBUG_MODE TRUE)</li>
+<li>message(STATUS &quot;=<mark>${var}</mark>=&quot;) 用这个命令check你是否真的find那个package，它相关的头文件和库文件是否存在。</li>
+</ol>
+<h3 id="5-compile-new-package"><strong>5. Compile New Package</strong></h3>
 <p>这里再记录下每次安装新package需要的步骤。当然，如果ubuntu的自带包管理可以直接安装，就直接安装啦。</p>
 <ol>
 <li>download source code, like: <strong>git clone https://xxxxx</strong></li>
@@ -1182,7 +1189,8 @@ list(APPEND CMAKE_MODULE_PATH ${PROJECT_SOURCE_DIR}/ cmake_module_dir)</p>
 <li><a href="#1-include-package-into-cmake"><strong>1. Include Package into CMake</strong></a></li>
 <li><a href="#2-packages-in-slamc"><strong>2. Packages in SLAM/C++</strong></a></li>
 <li><a href="#3-reference"><strong>3. Reference</strong></a></li>
-<li><a href="#4-compile-new-package"><strong>4. Compile New Package</strong></a></li>
+<li><a href="#4-debug-cmakeliststxt-%E6%96%87%E4%BB%B6"><strong>4. Debug CMakeLists.txt 文件</strong></a></li>
+<li><a href="#5-compile-new-package"><strong>5. Compile New Package</strong></a></li>
 </ul>
 </li>
 </ul>
