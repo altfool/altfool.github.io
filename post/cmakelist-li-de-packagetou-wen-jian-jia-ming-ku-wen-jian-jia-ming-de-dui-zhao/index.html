@@ -303,7 +303,7 @@
                         src='https://altfool.github.io/media/images/music.png' alt="音乐播放器" class="musicbtn"></i></a>
         </div>
         <div class="avatar-border">
-            <img src="https://altfool.github.io/images/avatar.png?v=1634851842804" class="avatar">
+            <img src="https://altfool.github.io/images/avatar.png?v=1634852384125" class="avatar">
         </div>
         <div class="sitename">Always-The-Fool</div>
         <span class="description" data-text='["温故而知新"]'>&nbsp;</span>
@@ -1108,8 +1108,8 @@ if not in system path, you can try this : <strong>find_package(xxx REQUIRED PATH
 <p>    有些时候include_directory用全大写或者原包名都是可以的，太混乱了，我就按自己的格式记录的。有些可能还和package版本相关，如果CMake添加不成功，可以看看path，包名啥的。<br>
     另外，G2O编译吐了，从github官网上下载的是成功的，你也能成功编译并添加到系统里，不过它就是link不了。才发现bleeding edge版本的经常会崩，还是老老实实用它release的几个稳定版本tag吧。而且官网的g2o它还提供了自己的cmake module，记得把它加到自己的CMAKE_MODULE_PATH。用如下类似的command:</p>
 <center> 
-    list(APPEND CMAKE_MODULE_PATH \${PROJECT_SOURCE_DIR}/ cmake_module_dir) </center>
-&nbsp;&nbsp;&nbsp;&nbsp;Jaja，用自己写的find_package(g2o)是找不全那个G2O的，而且有时候header files也找不到。劝你还是添加官网提供的FindG2O.cmake模块吧。使用官网提供的模块后，所有G2O全部就大写了。不过官网是没有\${G2O_LIBRARIES}或者\${G2O_LIBS}这两个变量的，你只能一个一个选择，比如\${G2O_STUFF_LIBRARY}，\${G2O_CORE_LIBRARY}，\${G2O_CLI_LIBRARY}，\${G2O_SOLVER_CHOLMOD}等。或者根据官网cmake模块中有的libraries自己设置那2个变量，如：set(G2O_LIBRARIES \${G2O_STUFF_LIBRARY} \${G2O_CORE_LIBRARY}...)来使用。
+    list(APPEND CMAKE_MODULE_PATH ${PROJECT_SOURCE_DIR}/ cmake_module_dir) </center>
+&nbsp;&nbsp;&nbsp;&nbsp;Jaja，用自己写的find_package(g2o)是找不全那个G2O的，而且有时候header files也找不到。劝你还是添加官网提供的FindG2O.cmake模块吧。使用官网提供的模块后，所有G2O全部就大写了。不过官网是没有${G2O_LIBRARIES}或者${G2O_LIBS}这两个变量的，你只能一个一个选择，比如${G2O_STUFF_LIBRARY}，${G2O_CORE_LIBRARY}，${G2O_CLI_LIBRARY}，${G2O_SOLVER_CHOLMOD}等。或者根据官网cmake模块中有的libraries自己设置那2个变量，如：set(G2O_LIBRARIES ${G2O_STUFF_LIBRARY} ${G2O_CORE_LIBRARY}...)来使用。
 <h3 id="4-debug-cmakeliststxt-文件"><strong>4. Debug CMakeLists.txt 文件</strong></h3>
 <p>    有时候，真的能给CMAKE跪下了。它说明文档里有些说能用的功能，然后用不了，作为一个小白，我只能说一个一个尝试，交学费，把能用的自己记录下来：</p>
 <ol>
