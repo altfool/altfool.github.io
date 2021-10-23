@@ -302,7 +302,7 @@
                         src='https://altfool.github.io/media/images/music.png' alt="音乐播放器" class="musicbtn"></i></a>
         </div>
         <div class="avatar-border">
-            <img src="https://altfool.github.io/images/avatar.png?v=1634956906130" class="avatar">
+            <img src="https://altfool.github.io/images/avatar.png?v=1634958343007" class="avatar">
         </div>
         <div class="sitename">Always-The-Fool</div>
         <span class="description" data-text='["温故而知新"]'>&nbsp;</span>
@@ -1023,7 +1023,7 @@ menulist.eq(i).show();
                 
             </div>
             <div class="postinfo-detail">
-                <div class="postdate"><i class="fa fa-calendar"></i>2021-10-20</div>
+                <div class="postdate"><i class="fa fa-calendar"></i>2021-10-19</div>
             <div class="poststatus postdate"><i class="fa fa-clock-o"></i> 4 min read</div>
             <div class="posttag">
                 
@@ -1063,15 +1063,15 @@ https://github.com/redragonx/r-net-bluetooth-control-app</li>
 <p>所以总体上，我们需要RPi，PiCAN(如<a href="https://copperhilltech.com/pican-2-can-bus-interface-for-raspberry-pi/">PiCAN2</a>)和电动轮椅带R-Net设备我们就可以基本控制了。<br>
 下面我们说下轮椅设备，我们实验室目前使用的是Permobil C400，其实我都不太懂它的具体结构，网上英文版的<a href="https://www.permobil.com/us/wp-content/uploads/2016/12/SM-C400-Older.pdf">说明书</a>把我看的头大。关键我给它公司打电话，它技术人员还表示，他们不会为如何hack轮椅提供任何帮助，说会违反FDA。唉，然后with limited help from them，我只能自己找网上的大神帮忙了。<br>
 轮椅：<br>
-<img src="https://altfool.github.io/post-images/1634955572787.jpg" alt="" width="400" loading="lazy"><br>
+![](https://altfool.github.io/post-images/1634955572787.jpg | width=400)<br>
 它右侧有一个VSI joystick的控制面板，用于控制轮椅运动。这个VSI joystic就是用的R-Net结构和轮椅互联的。我当时看到这个都想把它断连，然后把RPi接上去。幸好，这个轮椅背部提供了多个R-Net结构，所以我们可以把手控VSI joystick和RPi同时接入而不冲突。</p>
 <p>R-Net 结构：<br>
-<img src="https://altfool.github.io/post-images/1634956078512.jpg" alt="" width="400" loading="lazy"><br>
-<img src="https://altfool.github.io/post-images/1634956097910.jpg" alt="" width="400" loading="lazy"><br>
+![](https://altfool.github.io/post-images/1634956078512.jpg | width=400)<br>
+![](https://altfool.github.io/post-images/1634956097910.jpg | width=400)<br>
 这个R-Net就是VSI joystick控制器的所属的那个。</p>
 <p>轮椅背部多个R-Net结构：<br>
-<img src="https://altfool.github.io/post-images/1634956146129.jpg" alt="" width="400" loading="lazy"><br>
-<img src="https://altfool.github.io/post-images/1634956152351.jpg" alt="" width="400" loading="lazy"><br>
+![](https://altfool.github.io/post-images/1634956146129.jpg | width=400)<br>
+![](https://altfool.github.io/post-images/1634956152351.jpg | width=400)<br>
 这里可以看到轮椅背部其实提供了很多个R-Net结构。所以我们可以放过它自带的VSI joystick的控制接口啦😁。网上还有人把两个VSI joystick控制接口都插上轮椅，一起运作的，见这个<a href="https://www.youtube.com/watch?v=cfHHb-t7hkQ">视频</a>。说是，有些电动轮椅一出厂，就有主/副控制器（接口）。</p>
 <p>接下来就是根据discord里面大佬的instructions和信息，选择和我们这个轮椅适配的RPi和PiCAN，然后接上进行测验。之所以选适配，是因为discord里面有大佬描述了电压不配/充足的问题，所以建议看看discord里面大佬的留言，选择合适的。</p>
 <p>【To be continued】</p>
