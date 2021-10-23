@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://altfool.github.io</id>
     <title>Always-The-Fool</title>
-    <updated>2021-10-23T03:20:17.840Z</updated>
+    <updated>2021-10-23T03:23:30.667Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://altfool.github.io"/>
     <link rel="self" href="https://altfool.github.io/atom.xml"/>
@@ -15,7 +15,7 @@
         <id>https://altfool.github.io/post/ji-cheng-rapsberry-pi-he-dian-dong-lun-yi-with-r-net-she-bei/</id>
         <link href="https://altfool.github.io/post/ji-cheng-rapsberry-pi-he-dian-dong-lun-yi-with-r-net-she-bei/">
         </link>
-        <updated>2021-10-22T03:17:36.000Z</updated>
+        <updated>2021-10-21T15:17:36.000Z</updated>
         <content type="html"><![CDATA[<p>之前和轮椅相关的工作，包括在轮椅上安装imu，和intel realsense D435i和L515相机进行数据采集（用rosbag）和构建高程图（<a href="https://github.com/ANYbotics/elevation_mapping">看这里</a>）。当然啦，还包括基础地用SLAM 进行状态估计和建图，比如用<a href="http://introlab.github.io/rtabmap/">RTAB-MAP</a>。不过个人感觉这些工作和轮椅的交互性并不是很强，而且只是基本的把设备和电脑架设在轮椅之上，真的把轮椅只当个“工具椅”。为了更好的使用工具椅，我们期待能够做一些更复杂的工作，比如导航、避障等。其实不论在电脑上还是RAspberry Pi (RPi) 上，我们都已经能够根据出发点、目的地生成一系列的waypoints，那么我们当前遇到的一个小问题就是如何成功、有效地和轮椅交互，控制轮椅基于waypoints运动。本文就是为了解决这个问题的。尝试利用RPi和电动轮椅进行集成，来做到控制轮椅运动。<br>
 本人对机械控制就是个小白，搜索了一些相关资料，大概有了基本思路，先列举下我找的资料：</p>
 <ol>
@@ -32,11 +32,11 @@ https://github.com/redragonx/r-net-bluetooth-control-app</li>
 <p>所以总体上，我们需要RPi，PiCAN(如<a href="https://copperhilltech.com/pican-2-can-bus-interface-for-raspberry-pi/">PiCAN2</a>)和电动轮椅带R-Net设备我们就可以基本控制了。<br>
 下面我们说下轮椅设备，我们实验室目前使用的是Permobil C400，其实我都不太懂它的具体结构，网上英文版的<a href="https://www.permobil.com/us/wp-content/uploads/2016/12/SM-C400-Older.pdf">说明书</a>把我看的头大。关键我给它公司打电话，它技术人员还表示，他们不会为如何hack轮椅提供任何帮助，说会违反FDA。唉，然后with limited help from them，我只能自己找网上的大神帮忙了。<br>
 轮椅：<br>
-<img src="https://altfool.github.io/post-images/1634955572787.jpg" alt="" width="50" height="50" loading="lazy"><br>
+<img src="https://altfool.github.io/post-images/1634955572787.jpg" alt="" width="50" height="200" loading="lazy"><br>
 它右侧有一个VSI joystick的控制面板，用于控制轮椅运动。这个VSI joystic就是用的R-Net结构和轮椅互联的。我当时看到这个都想把它断连，然后把RPi接上去。幸好，这个轮椅背部提供了多个R-Net结构，所以我们可以把手控VSI joystick和RPi同时接入而不冲突。</p>
 <p>R-Net 结构：<br>
-<img src="https://altfool.github.io/post-images/1634956078512.jpg" alt="" width="100" height="100" loading="lazy"><br>
-<img src="https://altfool.github.io/post-images/1634956097910.jpg" alt="" width="100" height="100" loading="lazy"><br>
+<img src="https://altfool.github.io/post-images/1634956078512.jpg" alt="" width="100" height="200" loading="lazy"><br>
+<img src="https://altfool.github.io/post-images/1634956097910.jpg" alt="" width="100" height="200" loading="lazy"><br>
 这个R-Net就是VSI joystick控制器的所属的那个。</p>
 <p>轮椅背部多个R-Net结构：<br>
 <img src="https://altfool.github.io/post-images/1634956146129.jpg" alt="" width="100" height="100" loading="lazy"><br>
