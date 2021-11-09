@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://altfool.github.io</id>
     <title>Always-The-Fool</title>
-    <updated>2021-10-23T03:25:57.287Z</updated>
+    <updated>2021-11-09T04:23:42.180Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://altfool.github.io"/>
     <link rel="self" href="https://altfool.github.io/atom.xml"/>
@@ -10,6 +10,28 @@
     <logo>https://altfool.github.io/images/avatar.png</logo>
     <icon>https://altfool.github.io/favicon.ico</icon>
     <rights>All rights reserved 2021, Always-The-Fool</rights>
+    <entry>
+        <title type="html"><![CDATA[关于双线性插值的几何理解]]></title>
+        <id>https://altfool.github.io/post/guan-yu-shuang-xian-xing-cha-zhi-de-ji-he-li-jie/</id>
+        <link href="https://altfool.github.io/post/guan-yu-shuang-xian-xing-cha-zhi-de-ji-he-li-jie/">
+        </link>
+        <updated>2021-11-08T15:23:15.000Z</updated>
+        <content type="html"><![CDATA[<p>最近看了些关于bi-linear interpolation的解释，网上其实有很多，比如<a href="https://en.wikipedia.org/wiki/Bilinear_interpolation">wiki</a>里就讲得很详细了。个人对于它有点几何认识，所以记录一下。它就是做2次一维线性插值。原理和公式很简单。写代码实现的时候，我会根据几何理解去写，这样就不必查公式了。<br>
+一维：<br>
+<img src="https://altfool.github.io/post-images/1636430743842.png" alt="" loading="lazy"><br>
+x = (1-t) * x1 + t\ * x2;<br>
+看得出来，就和质心计算类似，越接近某个点，那么该点对我们所求点的贡献度就越大。这里x接近x1的话，t会变小，1-t会变大。然后它俩和为1（能够归一化）。所以计算方式就是“靠近的点值x对面的距离量”。<br>
+二维：（wiki上有很具体的公式，如下）<br>
+<img src="https://altfool.github.io/post-images/1636430998205.png" alt="" loading="lazy"><br>
+这里我想用几何形式表达这个：<br>
+<img src="https://altfool.github.io/post-images/1636431264269.png" alt="" loading="lazy"><br>
+根据公式可以知道：<br>
+Q = Q1*(1-xx)*(1-yy)+Q2*xx*(1-yy)+Q3*(1-xx)*yy+Q4*xx*yy;<br>
+看起来有点复杂，还和边的比例有关，其实它和一维的形式没啥区别，就是1维的插值，它只考虑线段比值就可以了，2维插值，需要考虑面积比值。还是老样子的分析，比如Q点靠近Q1，那么s1就会缩小，s4就会扩大。然后s1+s2+s3+s4=1（我这里的问题是计算亚像素点，所以四周的点都是像素点，横竖间距为1）。还是用“邻近点x对面的面积”就可以了，公式可以写成：<br>
+Q=Q1*s4 + Q2*s3 + Q3 * s2 + Q4 * s1;</p>
+<p>这个也可以同理扩展到3维空间性插值。</p>
+]]></content>
+    </entry>
     <entry>
         <title type="html"><![CDATA[集成Rapsberry Pi和电动轮椅 with R-Net 设备]]></title>
         <id>https://altfool.github.io/post/ji-cheng-rapsberry-pi-he-dian-dong-lun-yi-with-r-net-she-bei/</id>
