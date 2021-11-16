@@ -302,7 +302,7 @@
                         src='https://altfool.github.io/media/images/music.png' alt="音乐播放器" class="musicbtn"></i></a>
         </div>
         <div class="avatar-border">
-            <img src="https://altfool.github.io/images/avatar.png?v=1636432383854" class="avatar">
+            <img src="https://altfool.github.io/images/avatar.png?v=1637037853182" class="avatar">
         </div>
         <div class="sitename">Always-The-Fool</div>
         <span class="description" data-text='["温故而知新"]'>&nbsp;</span>
@@ -1031,7 +1031,7 @@ menulist.eq(i).show();
             </div>
             <div class="postinfo-detail">
                 <div class="postdate"><i class="fa fa-calendar"></i>2021-10-22</div>
-            <div class="poststatus postdate"><i class="fa fa-clock-o"></i> 4 min read</div>
+            <div class="poststatus postdate"><i class="fa fa-clock-o"></i> 5 min read</div>
             <div class="posttag">
                 
                 <a data-pjax href="https://altfool.github.io/tag/XpSkxQdxx/" class="postlink">
@@ -1081,6 +1081,8 @@ https://github.com/redragonx/r-net-bluetooth-control-app</li>
 <img src="https://altfool.github.io/post-images/1634956152351.jpg" alt="" width="100" loading="lazy"><br>
 这里可以看到轮椅背部其实提供了很多个R-Net结构。所以我们可以放过它自带的VSI joystick的控制接口啦😁。网上还有人把两个VSI joystick控制接口都插上轮椅，一起运作的，见这个<a href="https://www.youtube.com/watch?v=cfHHb-t7hkQ">视频</a>。说是，有些电动轮椅一出厂，就有主/副控制器（接口）。</p>
 <p>接下来就是根据discord里面大佬的instructions和信息，选择和我们这个轮椅适配的RPi和PiCAN，然后接上进行测验。之所以选适配，是因为discord里面有大佬描述了电压不配/充足的问题，所以建议看看discord里面大佬的留言，选择合适的。</p>
+<p>『2021-11-15』更新<br>
+根据<a href="https://github.com/redragonx/can2RNET">can2rnet</a>的教程，我们添加了can0，把raspberry pi 3+pican2 + rnet结合起来，并通过远程电脑ssh到RPi3进行操控。由于我这边为了将来能直接cmd control轮椅而不是通过joystick游戏柄控制，我写了一部分用keyboard直接控制轮椅的代码（详见<a href="https://github.com/altfool/wheelchair-autonomy">wheelchair-autonomy-tools</a>，python实现)。需要注意的是，远程键盘控制RPi会很难传达命令。然后我本来用pynput模块编写，后面他说没有display环境变量（X display未启动）。然后我用keyboard模块重新编写了一次，发现它还是不读。。。才知道ssh是传输文本的，它根本就没识别键盘按键。最后发现用命令：ssh -X user@ipxxx这个启动图形化接口的就可以了🤣。真是给跪了，pynput模块需要X display，用ssh -X就可行。keyboard模块最后还是没测验，因为远程键盘控制它不读。不过应该没啥问题，毕竟控制命令的都一样，就是用keyboard重写了一遍键盘按键监听部分（所以如果你坐在轮椅上，背后贴着RPi，手里捧着连接RPi的键盘鼠标和显示器，基于keyboard模块的代码实现应该可用😇）。</p>
 <p>【To be continued】</p>
 
             </div>
