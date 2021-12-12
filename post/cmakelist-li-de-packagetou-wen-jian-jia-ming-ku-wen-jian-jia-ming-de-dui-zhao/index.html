@@ -303,7 +303,7 @@
                         src='https://altfool.github.io/media/images/music.png' alt="音乐播放器" class="musicbtn"></i></a>
         </div>
         <div class="avatar-border">
-            <img src="https://altfool.github.io/images/avatar.png?v=1637889842545" class="avatar">
+            <img src="https://altfool.github.io/images/avatar.png?v=1639284597986" class="avatar">
         </div>
         <div class="sitename">Always-The-Fool</div>
         <span class="description" data-text='["温故而知新"]'>&nbsp;</span>
@@ -1129,6 +1129,7 @@ if not in system path, you can try this : <strong>find_package(xxx REQUIRED PATH
 <ol>
 <li>set(CMAKE_FIND_DEBUG_MODE TRUE)</li>
 <li>message(STATUS &quot;var: ${var}&quot;) 用这个命令check你是否真的find那个package，它相关的头文件和库文件是否存在。</li>
+<li>如果存在FindXXX.cmake 文件，最好阅读一下，里面有关于如何寻找头文件和库文件的命令。同时对应的变量名可能有些许差异，这样在验证的时候才能够用对变量名。如CSparse (from g2o repo/cmake_modules)的头文件变量名就是CSPARSE_INCLUDE_DIR（没有s），库文件变量名是CSPARSE_LIBRARY.</li>
 </ol>
 <h3 id="5-compile-new-package"><strong>5. Compile New Package</strong></h3>
 <p>    这里再记录下每次安装新package需要的步骤。当然，如果ubuntu的自带包管理可以直接安装，就直接安装啦。</p>
@@ -1136,6 +1137,7 @@ if not in system path, you can try this : <strong>find_package(xxx REQUIRED PATH
 <li>download source code, like: <strong>git clone https://xxxxx</strong></li>
 <li>inside directory: <strong>mkdir build &amp; cd build</strong></li>
 <li><strong>cmake ..</strong> (.. 表示上层目录)</li>
+<li><strong>cmake-gui ..</strong> (这一步可选)</li>
 <li><strong>make</strong></li>
 <li><strong>sudo make install</strong> ( 如果不想装系统路径下，那么在CMake里find_package记得注明package当前的path)</li>
 </ol>
